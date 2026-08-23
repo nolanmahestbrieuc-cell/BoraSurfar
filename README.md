@@ -64,5 +64,5 @@ le site sur GitHub Pages à chaque push sur `claude/borasurfar-site-im825a`
 Le `base` Vite est fixé à `/BoraSurfar/` (voir `vite.config.ts`) pour
 correspondre à l'URL `https://<owner>.github.io/BoraSurfar/`.
 
-**Étape unique côté GitHub (à faire une fois)** : dans Settings → Pages,
-régler "Source" sur **GitHub Actions**.
+Le site est disponible à :
+**https://nolanmahestbrieuc-cell.github.io/BoraSurfar/**
