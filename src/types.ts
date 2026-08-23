@@ -1,8 +1,11 @@
 export interface Category {
   id: string
   label: string
+  description: string
   icon: 'surfboard' | 'wetsuit' | 'gear'
 }
+
+export type Condition = 'new' | 'used'
 
 export interface Listing {
   id: string
@@ -10,6 +13,7 @@ export interface Listing {
   title: string
   price: number
   location: string
+  condition: Condition
   imageColor: string
 }
 

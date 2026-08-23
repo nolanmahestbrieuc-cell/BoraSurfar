@@ -29,7 +29,7 @@ export default function MobileBottomNavigation({ activeTab, onSelect }: Props) {
               aria-pressed={isActive}
               onClick={() => onSelect(tab.id)}
               className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
-                isActive ? 'text-brand-500' : 'text-gray-600 hover:text-brand-500'
+                isActive ? 'text-brand-500' : 'text-navy-600 hover:text-brand-500'
               }`}
             >
               <Icon size={22} strokeWidth={1.75} />

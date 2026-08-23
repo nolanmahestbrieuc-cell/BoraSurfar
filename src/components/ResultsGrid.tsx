@@ -1,25 +1,49 @@
+import { ArrowRight } from 'lucide-react'
 import type { Listing } from '../types'
+import ProductCard from './ProductCard'
 
 interface Props {
+  title: string
   listings: Listing[]
+  favoriteIds: Set<string>
+  onToggleFavorite: (id: string) => void
+  onAddToCart: (id: string) => void
+  onViewAll: () => void
 }
 
-export default function ResultsGrid({ listings }: Props) {
+export default function ResultsGrid({
+  title,
+  listings,
+  favoriteIds,
+  onToggleFavorite,
+  onAddToCart,
+  onViewAll,
+}: Props) {
   return (
-    <div className="grid grid-cols-2 gap-4 px-4 py-5 sm:grid-cols-3 sm:px-6 lg:grid-cols-4">
-      {listings.map((listing) => (
-        <article key={listing.id} className="group cursor-pointer">
-          <div
-            className="mb-2 aspect-square w-full rounded-xl"
-            style={{ backgroundColor: listing.imageColor }}
+    <div className="px-4 py-8 sm:px-6">
+      <div className="mb-5 flex items-center justify-between">
+        <h2 className="text-xl font-extrabold text-navy-900 sm:text-2xl">{title}</h2>
+        <button
+          type="button"
+          onClick={onViewAll}
+          className="flex shrink-0 items-center gap-1 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+        >
+          Voir tout
+          <ArrowRight size={16} strokeWidth={2} />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        {listings.map((listing) => (
+          <ProductCard
+            key={listing.id}
+            listing={listing}
+            isFavorite={favoriteIds.has(listing.id)}
+            onToggleFavorite={onToggleFavorite}
+            onAddToCart={onAddToCart}
           />
-          <h3 className="line-clamp-2 text-sm font-medium text-gray-900 group-hover:text-brand-600">
-            {listing.title}
-          </h3>
-          <p className="mt-0.5 text-sm font-bold text-gray-900">{listing.price} €</p>
-          <p className="text-xs text-gray-500">{listing.location}</p>
-        </article>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
