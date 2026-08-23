@@ -54,3 +54,15 @@ appel API réel.
   horizontalement, barre de navigation fixe en bas d'écran.
 - **Desktop** : contenu centré (largeur max ~1200px), navigation horizontale
   complète dans le header, barre de navigation mobile masquée.
+
+## Déploiement (GitHub Pages)
+
+Le workflow `.github/workflows/deploy.yml` build et déploie automatiquement
+le site sur GitHub Pages à chaque push sur `claude/borasurfar-site-im825a`
+(ou manuellement via l'onglet Actions → "Deploy to GitHub Pages" → Run workflow).
+
+Le `base` Vite est fixé à `/BoraSurfar/` (voir `vite.config.ts`) pour
+correspondre à l'URL `https://<owner>.github.io/BoraSurfar/`.
+
+**Étape unique côté GitHub (à faire une fois)** : dans Settings → Pages,
+régler "Source" sur **GitHub Actions**.
