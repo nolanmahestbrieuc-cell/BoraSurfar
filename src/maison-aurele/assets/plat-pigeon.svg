@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" role="img" aria-label="Placeholder : assiette de pigeon et betterave">
+  <defs>
+    <linearGradient id="pig-bg" x1="0.2" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#120C0C" />
+      <stop offset="52%" stop-color="#0B0807" />
+      <stop offset="100%" stop-color="#060505" />
+    </linearGradient>
+
+    <radialGradient id="pig-key" cx="0.6" cy="0.24">
+      <stop offset="0%" stop-color="#FFDCAE" stop-opacity="0.38" />
+      <stop offset="48%" stop-color="#B3703A" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#5E3512" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="pig-plate" x1="0.8" y1="0" x2="0.2" y2="1">
+      <stop offset="0%" stop-color="#4A4340" />
+      <stop offset="45%" stop-color="#2E2A28" />
+      <stop offset="100%" stop-color="#171514" />
+    </linearGradient>
+
+    <radialGradient id="pig-vignette">
+      <stop offset="42%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.74" />
+    </radialGradient>
+
+    <filter id="pig-blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24" />
+    </filter>
+
+    <filter id="pig-blur-s" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+
+    <filter id="pig-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1250" fill="url(#pig-bg)" />
+  <rect width="1000" height="1250" fill="url(#pig-key)" />
+
+  <ellipse cx="500" cy="748" rx="352" ry="176" fill="#000000" opacity="0.6" filter="url(#pig-blur)" />
+
+  <!-- Assiette ardoise -->
+  <ellipse cx="500" cy="694" rx="336" ry="228" fill="url(#pig-plate)" />
+  <ellipse cx="500" cy="678" rx="336" ry="228" fill="none" stroke="#C8A461" stroke-opacity="0.35" stroke-width="3" />
+  <ellipse cx="500" cy="694" rx="236" ry="156" fill="#0E0C0B" opacity="0.35" />
+
+  <!-- Jus de betterave -->
+  <path d="M318 706 C 372 622, 604 616, 676 692 C 726 748, 596 812, 470 800 C 366 790, 282 764, 318 706 Z"
+        fill="#6E1C33" opacity="0.8" filter="url(#pig-blur-s)" />
+  <path d="M690 726 C 726 736, 748 758, 742 776" fill="none" stroke="#7E2038" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+
+  <!-- Filets de pigeon -->
+  <g>
+    <path d="M414 690 C 430 632, 500 610, 540 646 C 572 676, 552 730, 500 744 C 452 758, 404 736, 414 690 Z" fill="#4A2320" />
+    <path d="M424 668 C 452 634, 508 626, 534 652" fill="none" stroke="#8C4A34" stroke-width="9" stroke-linecap="round" opacity="0.75" />
+    <path d="M528 654 C 578 630, 626 646, 638 686 C 648 720, 608 744, 568 736" fill="#54281F" />
+    <path d="M544 664 C 586 648, 620 660, 630 688" fill="none" stroke="#8C4A34" stroke-width="8" stroke-linecap="round" opacity="0.7" />
+  </g>
+
+  <!-- Betteraves -->
+  <g>
+    <circle cx="386" cy="734" r="26" fill="#8A2543" />
+    <circle cx="386" cy="734" r="14" fill="#B04663" opacity="0.75" />
+    <circle cx="626" cy="742" r="20" fill="#8A2543" />
+    <circle cx="626" cy="742" r="10" fill="#B04663" opacity="0.75" />
+    <circle cx="470" cy="778" r="15" fill="#9B2F4C" />
+  </g>
+
+  <!-- Herbes et poudre -->
+  <g>
+    <path d="M566 606 C 598 578, 640 580, 660 606" fill="none" stroke="#4F6B3C" stroke-width="7" stroke-linecap="round" />
+    <path d="M396 646 C 372 620, 374 592, 396 576" fill="none" stroke="#4F6B3C" stroke-width="6" stroke-linecap="round" />
+    <circle cx="530" cy="600" r="5" fill="#7E9A57" />
+    <circle cx="672" cy="700" r="6" fill="#D9C79C" opacity="0.8" />
+    <circle cx="342" cy="686" r="5" fill="#D9C79C" opacity="0.7" />
+  </g>
+
+  <ellipse cx="626" cy="556" rx="160" ry="76" fill="#FFE2B6" opacity="0.12" filter="url(#pig-blur)" />
+
+  <rect width="1000" height="1250" fill="url(#pig-vignette)" />
+  <rect width="1000" height="1250" filter="url(#pig-grain)" opacity="0.08" style="mix-blend-mode:overlay" />
+</svg>

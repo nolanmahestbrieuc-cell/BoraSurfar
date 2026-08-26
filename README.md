@@ -48,6 +48,41 @@ src/
 Les données sont mockées dans `src/data/` et prêtes à être remplacées par un
 appel API réel.
 
+## Page « Maison Aurèle »
+
+Le projet contient une seconde page, indépendante de la marketplace : la page
+d'accueil du restaurant gastronomique **Maison Aurèle**. C'est une entrée Vite
+distincte (`maison-aurele.html`), accessible en local sur
+`http://localhost:5173/maison-aurele.html` et buildée dans
+`dist/maison-aurele.html`.
+
+Direction artistique : mise en page éditoriale type magazine (grille 12
+colonnes, décalages verticaux, filets fins), typographie serif Cormorant
+Garamond, fond sombre chaud et accents dorés, whitespace généreux.
+
+```
+maison-aurele.html                     # entrée HTML (polices, meta)
+src/maison-aurele/
+├── main.tsx                            # point d'entrée React
+├── MaisonAurele.tsx                    # assemble les sections
+├── maison-aurele.css                   # grain, filet doré, animations
+├── components/
+│   ├── TopBar.tsx                      # navigation fixe + bouton Réserver
+│   ├── Hero.tsx                        # visuel plein cadre, accroche, CTA
+│   ├── Manifesto.tsx                   # récit « La maison » en grille magazine
+│   ├── MenuPreview.tsx                 # aperçu de la carte + formules
+│   ├── DishCard.tsx                    # plat signature
+│   ├── SectionLabel.tsx                # intitulé de rubrique (« I — La maison »)
+│   └── Footer.tsx                      # réservation, adresse, horaires
+├── data/restaurant.ts                  # plats, menus, horaires, coordonnées
+└── assets/*.svg                        # visuels placeholder (à remplacer par des photos)
+```
+
+Les visuels de `src/maison-aurele/assets/` sont des **placeholders SVG**
+(ambiance de salle, passe de cuisine, table dressée, trois plats). Ils se
+remplacent par de vraies photographies en changeant simplement les imports
+dans `data/restaurant.ts`, `Hero.tsx` et `Manifesto.tsx`.
+
 ## Responsive
 
 - **Mobile** : header compact avec menu déroulant, catégories défilables

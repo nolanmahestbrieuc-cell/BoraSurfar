@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" role="img" aria-label="Placeholder : assiette de langoustine">
+  <defs>
+    <linearGradient id="lang-bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#141009" />
+      <stop offset="55%" stop-color="#0C0907" />
+      <stop offset="100%" stop-color="#070605" />
+    </linearGradient>
+
+    <radialGradient id="lang-key" cx="0.42" cy="0.28">
+      <stop offset="0%" stop-color="#FFE2B4" stop-opacity="0.42" />
+      <stop offset="45%" stop-color="#C98B41" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#6B4013" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="lang-plate" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#F0E6D6" />
+      <stop offset="46%" stop-color="#CDBEA8" />
+      <stop offset="100%" stop-color="#5E5245" />
+    </linearGradient>
+
+    <radialGradient id="lang-well" cx="0.45" cy="0.4">
+      <stop offset="0%" stop-color="#3A3129" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#241E18" stop-opacity="0.12" />
+    </radialGradient>
+
+    <radialGradient id="lang-vignette">
+      <stop offset="42%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.72" />
+    </radialGradient>
+
+    <filter id="lang-blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22" />
+    </filter>
+
+    <filter id="lang-blur-s" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+
+    <filter id="lang-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1250" fill="url(#lang-bg)" />
+  <rect width="1000" height="1250" fill="url(#lang-key)" />
+
+  <!-- Ombre portée -->
+  <ellipse cx="500" cy="740" rx="360" ry="180" fill="#000000" opacity="0.55" filter="url(#lang-blur)" />
+
+  <!-- Assiette -->
+  <ellipse cx="500" cy="690" rx="345" ry="235" fill="url(#lang-plate)" opacity="0.94" />
+  <ellipse cx="500" cy="690" rx="248" ry="164" fill="url(#lang-well)" />
+  <ellipse cx="500" cy="672" rx="345" ry="235" fill="none" stroke="#FBEFD9" stroke-opacity="0.35" stroke-width="3" />
+
+  <!-- Sauce, en croissant plutôt qu'en flaque centrale -->
+  <path d="M352 716 C 396 664, 512 646, 604 668 C 668 684, 682 726, 626 748 C 540 780, 400 772, 352 716 Z"
+        fill="#A96C26" opacity="0.5" filter="url(#lang-blur-s)" />
+
+  <!-- Langoustine : queue segmentée, pinces et antennes -->
+  <g transform="rotate(-14 500 664)">
+    <!-- antennes -->
+    <path d="M414 596 C 380 556, 356 548, 332 552" fill="none" stroke="#D98A54" stroke-width="5" stroke-linecap="round" opacity="0.75" />
+    <path d="M420 606 C 392 574, 360 566, 336 574" fill="none" stroke="#D98A54" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <!-- pinces -->
+    <path d="M438 606 C 410 578, 396 560, 402 542" fill="none" stroke="#E8965C" stroke-width="11" stroke-linecap="round" />
+    <path d="M402 546 C 388 532, 388 516, 400 508" fill="none" stroke="#F0AC77" stroke-width="9" stroke-linecap="round" />
+    <path d="M462 600 C 452 572, 452 552, 466 538" fill="none" stroke="#E8965C" stroke-width="10" stroke-linecap="round" />
+    <path d="M466 540 C 458 524, 462 510, 476 504" fill="none" stroke="#F0AC77" stroke-width="8" stroke-linecap="round" />
+    <!-- tête -->
+    <ellipse cx="452" cy="632" rx="42" ry="32" fill="#DE8A4E" />
+    <ellipse cx="444" cy="624" rx="22" ry="14" fill="#F6C296" opacity="0.7" />
+    <!-- segments de queue -->
+    <ellipse cx="498" cy="650" rx="36" ry="29" fill="#E8965C" />
+    <ellipse cx="540" cy="668" rx="32" ry="26" fill="#E28A4F" />
+    <ellipse cx="578" cy="688" rx="27" ry="22" fill="#D97F45" />
+    <ellipse cx="608" cy="706" rx="21" ry="17" fill="#CE7239" />
+    <g stroke="#F7C89A" stroke-width="5" stroke-linecap="round" opacity="0.6" fill="none">
+      <path d="M486 632 C 500 626, 514 630, 522 640" />
+      <path d="M528 652 C 540 646, 552 650, 558 658" />
+      <path d="M568 674 C 578 670, 588 674, 592 680" />
+    </g>
+    <!-- nageoire caudale -->
+    <path d="M624 714 C 660 700, 682 712, 686 728 C 662 736, 636 736, 620 728 Z" fill="#C96C33" />
+    <path d="M624 716 C 650 730, 656 748, 648 762 C 630 750, 618 736, 616 726 Z" fill="#D97F45" opacity="0.85" />
+  </g>
+
+  <!-- Condiments et herbes -->
+  <g opacity="0.95">
+    <circle cx="380" cy="736" r="11" fill="#F2E3C4" />
+    <circle cx="654" cy="704" r="9" fill="#F2E3C4" />
+    <circle cx="612" cy="762" r="7" fill="#EBD6AE" />
+    <path d="M604 600 C 634 574, 672 576, 690 602" fill="none" stroke="#5D7A45" stroke-width="7" stroke-linecap="round" />
+    <path d="M356 682 C 334 658, 336 630, 358 614" fill="none" stroke="#5D7A45" stroke-width="6" stroke-linecap="round" />
+    <circle cx="446" cy="764" r="6" fill="#7E9A57" />
+    <circle cx="558" cy="600" r="5" fill="#7E9A57" />
+  </g>
+
+  <!-- Éclat de lumière -->
+  <ellipse cx="392" cy="566" rx="150" ry="70" fill="#FFE7C0" opacity="0.14" filter="url(#lang-blur)" />
+
+  <rect width="1000" height="1250" fill="url(#lang-vignette)" />
+  <rect width="1000" height="1250" filter="url(#lang-grain)" opacity="0.08" style="mix-blend-mode:overlay" />
+</svg>

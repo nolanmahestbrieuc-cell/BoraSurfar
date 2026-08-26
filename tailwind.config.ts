@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 export default {
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  content: ['./index.html', './maison-aurele.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -34,6 +34,17 @@ export default {
           100: '#F9F1DC',
           200: '#F0E1B8',
         },
+        // Palette éditoriale de la page Maison Aurèle : nuit chaude + or.
+        aurele: {
+          ink: '#0A0908',
+          coal: '#100D0A',
+          ember: '#1A1510',
+          bark: '#2A2119',
+          gold: '#C8A461',
+          amber: '#E4C88F',
+          cream: '#F4EEE2',
+          mist: '#A79D8C',
+        },
       },
       fontFamily: {
         sans: [
@@ -44,10 +55,12 @@ export default {
           'Roboto',
           'sans-serif',
         ],
+        display: ['Cormorant Garamond', 'Times New Roman', 'Georgia', 'serif'],
       },
       maxWidth: {
         app: '480px',
         desktop: '1200px',
+        editorial: '1440px',
       },
     },
   },
