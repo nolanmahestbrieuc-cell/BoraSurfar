@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="Placeholder : détail de table dressée">
+  <defs>
+    <linearGradient id="det-bg" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#140F09" />
+      <stop offset="55%" stop-color="#0C0907" />
+      <stop offset="100%" stop-color="#070605" />
+    </linearGradient>
+
+    <radialGradient id="det-key" cx="0.7" cy="0.2">
+      <stop offset="0%" stop-color="#FFDFB2" stop-opacity="0.45" />
+      <stop offset="45%" stop-color="#BE853F" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#5E3A14" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="det-nappe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E4D9C4" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#4C4234" stop-opacity="0.35" />
+    </linearGradient>
+
+    <radialGradient id="det-vignette">
+      <stop offset="42%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.7" />
+    </radialGradient>
+
+    <filter id="det-blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+
+    <filter id="det-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#det-bg)" />
+  <rect width="1000" height="1000" fill="url(#det-key)" />
+
+  <!-- Nappe -->
+  <path d="M0 640 C 260 604, 720 604, 1000 646 L1000 1000 L0 1000 Z" fill="url(#det-nappe)" />
+
+  <!-- Bougie -->
+  <rect x="470" y="430" width="42" height="210" rx="12" fill="#E8DCC4" opacity="0.9" />
+  <ellipse cx="491" cy="430" rx="21" ry="8" fill="#F6EEDF" />
+  <path d="M491 372 C 508 396, 506 420, 491 428 C 476 420, 474 396, 491 372 Z" fill="#FFC873" />
+  <ellipse cx="491" cy="404" rx="86" ry="112" fill="#FFC873" opacity="0.22" filter="url(#det-blur)" />
+
+  <!-- Verres -->
+  <g fill="#EBDCBE" opacity="0.4">
+    <path d="M250 470 C 250 546, 286 566, 286 566 L286 640 L246 640 L246 566 C 246 566, 210 546, 210 470 Z" />
+    <path d="M770 496 C 770 562, 800 580, 800 580 L800 640 L766 640 L766 580 C 766 580, 736 562, 736 496 Z" />
+  </g>
+  <g fill="#6E1C33" opacity="0.6">
+    <path d="M214 512 C 226 552, 250 562, 248 562 C 262 562, 282 550, 282 512 Z" />
+  </g>
+
+  <!-- Couverts -->
+  <g fill="#C8A461" opacity="0.65">
+    <rect x="620" y="686" width="10" height="200" rx="5" />
+    <rect x="650" y="686" width="10" height="200" rx="5" />
+    <ellipse cx="345" cy="716" rx="26" ry="46" />
+    <rect x="338" y="746" width="12" height="150" rx="6" />
+  </g>
+
+  <!-- Assiette -->
+  <ellipse cx="500" cy="800" rx="196" ry="76" fill="#000000" opacity="0.5" filter="url(#det-blur)" />
+  <ellipse cx="500" cy="784" rx="186" ry="70" fill="#EFE6D6" opacity="0.92" />
+  <ellipse cx="500" cy="778" rx="186" ry="70" fill="none" stroke="#C8A461" stroke-opacity="0.6" stroke-width="4" />
+  <ellipse cx="500" cy="786" rx="118" ry="42" fill="#2A241D" opacity="0.18" />
+
+  <rect width="1000" height="1000" fill="url(#det-vignette)" />
+  <rect width="1000" height="1000" filter="url(#det-grain)" opacity="0.08" style="mix-blend-mode:overlay" />
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Placeholder : salle du restaurant à la tombée du soir">
+  <defs>
+    <linearGradient id="salle-room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080706" />
+      <stop offset="42%" stop-color="#161009" />
+      <stop offset="78%" stop-color="#100C08" />
+      <stop offset="100%" stop-color="#070605" />
+    </linearGradient>
+
+    <radialGradient id="salle-glow">
+      <stop offset="0%" stop-color="#FFE0B0" stop-opacity="0.9" />
+      <stop offset="28%" stop-color="#E7A957" stop-opacity="0.4" />
+      <stop offset="65%" stop-color="#9A6425" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#6B4013" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="salle-cone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD79B" stop-opacity="0.5" />
+      <stop offset="55%" stop-color="#D79B4E" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#8A5A20" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="salle-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8CFA6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#3A2A17" stop-opacity="0.05" />
+    </linearGradient>
+
+    <radialGradient id="salle-vignette">
+      <stop offset="45%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.78" />
+    </radialGradient>
+
+    <filter id="salle-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26" />
+    </filter>
+
+    <filter id="salle-softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="58" />
+    </filter>
+
+    <filter id="salle-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#salle-room)" />
+
+  <!-- Boiseries et arches du fond -->
+  <g opacity="0.5" fill="#241a10">
+    <rect x="150" y="180" width="240" height="470" rx="120" />
+    <rect x="840" y="150" width="260" height="500" rx="130" />
+    <rect x="1540" y="180" width="240" height="470" rx="120" />
+  </g>
+
+  <!-- Halos des suspensions -->
+  <g>
+    <ellipse cx="420" cy="470" rx="330" ry="300" fill="url(#salle-glow)" />
+    <ellipse cx="975" cy="410" rx="420" ry="380" fill="url(#salle-glow)" />
+    <ellipse cx="1520" cy="500" rx="300" ry="280" fill="url(#salle-glow)" />
+  </g>
+
+  <!-- Cônes de lumière -->
+  <g>
+    <path d="M400 300 L440 300 L620 760 L220 760 Z" fill="url(#salle-cone)" filter="url(#salle-soft)" />
+    <path d="M950 250 L1000 250 L1240 780 L710 780 Z" fill="url(#salle-cone)" filter="url(#salle-soft)" />
+    <path d="M1500 330 L1540 330 L1710 770 L1330 770 Z" fill="url(#salle-cone)" filter="url(#salle-soft)" />
+  </g>
+
+  <!-- Suspensions -->
+  <g stroke="#3a2c1b" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M420 0 L420 288" />
+    <path d="M975 0 L975 238" />
+    <path d="M1520 0 L1520 318" />
+  </g>
+  <g fill="#F6D9A6">
+    <ellipse cx="420" cy="298" rx="46" ry="16" opacity="0.95" />
+    <ellipse cx="975" cy="248" rx="58" ry="19" opacity="0.95" />
+    <ellipse cx="1520" cy="328" rx="42" ry="15" opacity="0.95" />
+  </g>
+
+  <!-- Tables nappées -->
+  <g filter="url(#salle-soft)">
+    <ellipse cx="430" cy="810" rx="240" ry="62" fill="url(#salle-table)" />
+    <ellipse cx="980" cy="880" rx="330" ry="82" fill="url(#salle-table)" />
+    <ellipse cx="1520" cy="820" rx="230" ry="58" fill="url(#salle-table)" />
+  </g>
+
+  <!-- Verrerie -->
+  <g fill="#F3DCB4" opacity="0.55" filter="url(#salle-softer)">
+    <ellipse cx="360" cy="768" rx="16" ry="34" />
+    <ellipse cx="500" cy="776" rx="14" ry="30" />
+    <ellipse cx="905" cy="832" rx="19" ry="40" />
+    <ellipse cx="1055" cy="838" rx="17" ry="36" />
+    <ellipse cx="1470" cy="782" rx="15" ry="32" />
+  </g>
+
+  <!-- Premier plan sombre -->
+  <path d="M0 900 C 380 852, 760 972, 1180 924 C 1500 888, 1720 962, 1920 930 L1920 1080 L0 1080 Z" fill="#060504" opacity="0.92" />
+
+  <rect width="1920" height="1080" fill="url(#salle-vignette)" />
+  <rect width="1920" height="1080" filter="url(#salle-grain)" opacity="0.07" style="mix-blend-mode:overlay" />
+</svg>

@@ -6,6 +6,16 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'build' ? '/BoraSurfar/' : '/',
+  build: {
+    rollupOptions: {
+      // Deux pages indépendantes : la marketplace surf et la page du
+      // restaurant Maison Aurèle (/maison-aurele.html).
+      input: {
+        main: 'index.html',
+        maisonAurele: 'maison-aurele.html',
+      },
+    },
+  },
   server: {
     host: true,
     port: 5173,
